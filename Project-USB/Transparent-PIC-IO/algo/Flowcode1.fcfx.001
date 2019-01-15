@@ -1,6 +1,6 @@
 <root>
-<document schema='101' license='1,,*****' title='' description='' target='PIC.18F.18F4550' >
-	<config data='!0,feec!10,feff!20,ffff!30,ff9b!40,ffff!50,ffff!60,ffff%5,1%3,1%0,4%8,e%e,1%f,1%15,1%10,1%11,3%13,3%18,0%19,f%28,1%29,1%2a,1%2f,1%30,1%32,0%35,0%36,0%37,1%40,1%41,1%42,1%43,1%4f,1%4e,1%50,1%51,1%52,1%53,1%5f,1%5e,1%5d,1%60,1%61,1%62,1%63,1%6e,1' clkspd='19660800' simspd='6' usewdt='0' constif='0' />
+<document schema='101' license='1,,*****' title='' description='' target='PIC.18F.18F2550' >
+	<config data='!0,fce4!10,feff!20,ffff!30,ff9b!40,ffff!50,ffff!60,ffff%5,1%3,0%0,4%8,c%e,1%f,1%15,1%10,1%11,3%13,3%18,0%19,f%28,1%29,1%2a,1%2f,1%30,1%32,0%35,0%36,0%37,1%40,1%41,1%42,1%43,1%4f,1%4e,1%50,1%51,1%52,1%53,1%5f,1%5e,1%5d,1%60,1%61,1%62,1%63,1%6e,1' clkspd='19660800' simspd='6' usewdt='0' constif='0' />
 	<plugins >
 		<dll_dbg_icd enabled='0' >
 			<data name='debug' value='1' />
@@ -55,22 +55,41 @@
 				<macro >
 					<flowline name='Main' description='' >
 						<return name='Return' type='v0' description='' isconst='0' isinit='0' usrinit='' setinit='' />
-						<command class_type='output' title='Output' cmdcolor='7895044' cmdcolor_sec='7895044' mode='0' port='1048579' mask='0' exp='0xff' />
-						<command class_type='output' title='Output' cmdcolor='7895044' cmdcolor_sec='7895044' mode='1' port='1048576' mask='2' exp='1' />
-						<command class_type='delay' title='Delay' cmdcolor='7895044' cmdcolor_sec='7895044' exp='100' type='1' />
-						<command class_type='output' title='Output' cmdcolor='7895044' cmdcolor_sec='7895044' mode='1' port='1048576' mask='1' exp='1' />
-						<command class_type='output' title='Output' cmdcolor='7895044' cmdcolor_sec='7895044' mode='0' port='1048579' mask='0' exp='0' />
+						<command class_type='call' title='Call Component Macro' cmdcolor='1975743' cmdcolor_sec='1975743' component='USB_Serial1' macro='Initialise' />
 						<command class_type='delay' title='Delay' cmdcolor='7895044' cmdcolor_sec='7895044' exp='1000' type='1' />
 						<command class_type='loop' title='Loop' cmdcolor='3568629' cmdcolor_sec='3568629' type='0' exp='1' >
-							<flowline >
-								<command class_type='input' title='Input' cmdcolor='3610239' cmdcolor_sec='3610239' mode='0' port='1048577' mask='0' exp='input_switches' />
-								<command class_type='delay' title='Delay' cmdcolor='7895044' cmdcolor_sec='7895044' exp='10' type='1' />
-								<command class_type='output' title='Output' cmdcolor='7895044' cmdcolor_sec='7895044' mode='0' port='1048579' mask='0' exp='input_switches' />
-							</flowline>
+							<flowline />
 						</command>
 					</flowline>
 				</macro>
 			</macros>
+			<component class_type='ref' guid='3e28ac22-2855-410a-9660-0b0a4731e545' vmin='6' vmaj='1' codename='USB_Serial1' x='0' y='0' z='0.755' xsz='60' ysz='26' zsz='1.51' xang='0' yang='0' zang='0' xquat='0' yquat='0' zquat='0' wquat='1' visible='1' interactive='1' solid='1' layer='1' poslock='0' >
+				<resources />
+				<properties />
+				<values >
+					<value target='vendor_ID' data='4799' />
+					<value target='product_ID' data='61456' />
+					<value target='dev_name' data='Harshana' />
+					<value target='dev_manufacturer' data='Matrix Multimedia Ltd.' />
+					<value target='major_version' data='1' />
+					<value target='minor_version' data='0' />
+					<value target='RETURN' data='000' />
+					<value target='enumeration_tout' data='0' />
+					<value target='timeout' data='10' />
+					<value target='usb_type' data='1' />
+					<value target='TXBUFSZ' data='64' />
+					<value target='RXBUFSZ' data='64' />
+					<value target='driver_directory' data='$(srcdir)' />
+					<value target='driver_filename' data='Flowcode_USB_Serial_Driver' />
+					<value target='gen_driver' data='0' />
+					<value target='COM_port' data='001' />
+					<value target='label' data='USB Serial' />
+				</values>
+				<events />
+				<apis />
+				<variables />
+				<macros />
+			</component>
 		</component>
 	</components>
 	<keymap />
@@ -91,7 +110,7 @@
 		<camerakey6 xe='-173.205' ye='-173.205' ze='173.205' xt='0' yt='0' zt='0' xquat='-0.424708' yquat='0.17592' zquat='0.339851' wquat='0.820473' />
 	</panel3d>
 	<layout >
-		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA3AIAAD8BAAA' zoom='75' scrollx='0' scrolly='639' flags='0' />
+		<view type='0' name='Main' mode='0' placement='LAAAAAAAAAABAAAA---------------------wUAAAAYAAAA3AIAAD8BAAA' zoom='75' scrollx='0' scrolly='146' flags='0' />
 	</layout>
 </document>
 </root>
