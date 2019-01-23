@@ -8,7 +8,7 @@ public class FrameDeviceInfo {
     static ButtonGroup[] buttonGroupsInOut;
 
     public static void draw(){
-        frame=new JFrame("Device info!");
+        frame=new JFrame("CO327 Project -USB IO");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
@@ -35,6 +35,10 @@ public class FrameDeviceInfo {
             jp.add(radioButtonsInOut[d][1]);
         }
 
+        JButton okay=new JButton("Okay");
+        okay.addActionListener(new ActionListener_DeviceInfoOkay());
+        jp.add(okay);
+
 
 
 
@@ -43,5 +47,18 @@ public class FrameDeviceInfo {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+
+    public static void erase(){
+        for(int d=0;d<Main.NO_OF_DEVICES;d++){
+            Device.deviceType dType;
+            if(radioButtonsInOut[d][0].isSelected())dType= Device.deviceType.INPUT;
+            else dType= Device.deviceType.OUTPUT;
+            Main.devices[d]=new Device(dType,textFieldDeviceLabels[d].getText());
+        }
+        frame.dispose();
+        FrameControlPanel.draw();
+
     }
 }

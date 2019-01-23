@@ -5,7 +5,7 @@ public class FrameNoOfDevices {
     static JSpinner jSpin;
     static JFrame frame;
     public static void draw(){
-        frame=new JFrame("Welcome!");
+        frame=new JFrame("CO327 Project -USB IO");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 

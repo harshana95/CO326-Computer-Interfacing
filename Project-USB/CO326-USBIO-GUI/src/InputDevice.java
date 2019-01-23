@@ -1,5 +1,10 @@
 public class InputDevice extends Device{
-    public void read(){
+    public String read(){
 
+
+        System.out.println("DEBUG: Finished reading");
+        return "00000000";
     }
+
+
 }
