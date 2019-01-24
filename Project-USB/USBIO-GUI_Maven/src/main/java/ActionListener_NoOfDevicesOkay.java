@@ -6,7 +6,7 @@ public class ActionListener_NoOfDevicesOkay implements ActionListener{
 //    @Override
     public void actionPerformed(ActionEvent e) {
 //SUREN
-//        Main.NO_OF_DEVICES= (int)FrameNoOfDevices.jSpin.getValue();
+        Main.NO_OF_DEVICES= (Integer) FrameNoOfDevices.jSpin.getValue();
         FrameNoOfDevices.erase();
     }
 }
