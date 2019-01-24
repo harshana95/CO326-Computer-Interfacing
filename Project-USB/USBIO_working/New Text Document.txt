@@ -1,7 +1,0 @@
-Read #
-U2 - PL
-U3 - PM
-
-Write $
-U4 - QN<byte_to_write>
-U5 - QO<byte_to_write>
