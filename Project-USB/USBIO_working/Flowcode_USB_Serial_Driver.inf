@@ -90,6 +90,6 @@ MFGFILENAME="mchpcdc"
 DRIVERFILENAME="usbser"
 INSTDISK="Matrix Multimedia Ltd. Installation Disc"
 MFGNAME="Matrix Multimedia Ltd."
-DESCRIPTION="Flowcode USB Serial"
+DESCRIPTION="Harshana"
 SERVICE="USB RS-232 Emulation Driver"
 
