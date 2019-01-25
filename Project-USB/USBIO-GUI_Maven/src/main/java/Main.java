@@ -9,21 +9,26 @@ public class Main {
     static SerialPort comPort;
     public static void main(String[] args) {
 
+        initPort();
+
+
+
+        FrameNoOfDevices.draw();
+
+
+
+    }
+
+
+    public static void initPort(){
         SerialPort[] SP = SerialPort.getCommPorts();
 
-//        SerialPort comPort = SerialPort.getCommPorts()[0];
-//        comPort.openPort();
 
         for (SerialPort sp : SP) {
             System.out.println(sp);
         }
 
-
-
-
-//        FrameNoOfDevices.draw();
-
-
-
+        comPort = SP[0];
+        comPort.openPort();
     }
 }

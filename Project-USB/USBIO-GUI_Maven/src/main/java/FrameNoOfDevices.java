@@ -14,7 +14,7 @@ public class FrameNoOfDevices {
 
         jp.add(new JLabel("No of devices:"),0,0);
 
-        jSpin=new JSpinner();
+        jSpin=new JSpinner(new SpinnerNumberModel(0, 0, 256, 1));
         jp.add(jSpin,0,1);
 
         JButton jBut=new JButton("Okay");

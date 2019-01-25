@@ -12,13 +12,13 @@ public class ActionListener_ReadWrite implements ActionListener {
 
         if(Main.devices[devID].getType()== Device.deviceType.INPUT){
             System.out.println("DEBUG: Read from device "+devID);
-            String data=((InputDevice)Main.devices[devID]).read();
+            String data=Main.devices[devID].read();
             FrameControlPanel.byteValue[devID].setText(data);
         }
         else{
             System.out.println("DEBUG: Write to device "+devID);
             String data=FrameControlPanel.byteValue[devID].getText();
-            ((OutputDevice)Main.devices[devID]).write(data);
+            Main.devices[devID].write(data);
         }
     }
 }
